@@ -1,0 +1,70 @@
+.xcode_stations {
+	position: relative;
+}
+.xcode_station {
+	display: inline-block;
+	position: absolute;
+}
+
+.xcode_station img {
+	height: 64px;
+	width: 64px;
+	border: 1px solid #0989d6;
+	border-radius: 32px;
+	background-color: #fa8228;
+}
+
+.xcode_station_text {
+	display: none;
+	position: absolute;
+	width: 200px;
+	top: 56px;
+	left: -63px;
+	background-color: rgba(176, 188, 34, 0.7);
+	border: 1px solid #b0bc22;
+	color: #fff;
+	z-index: 2000;
+	padding: 5px;
+}
+
+.xcode_station_text h1, .xcode_station_test p {
+	padding: 0;
+	margin: 0;
+}
+
+.xcode_station_text h1 {
+	font-size: 120%;
+}
+
+.xcode_station_test p {
+	font-size:80%;
+}
+
+.xcode_mobile .xcode_station {
+	position: relative;
+	background-color: rgba(176, 188, 34, 0.7);
+	border: 1px solid #b0bc22;
+	width: 100%;
+}
+
+.xcode_mobile a {
+	float: left;
+	width: 20%;
+	height: 100%;
+	line-height: 100%;
+}
+
+.xcode_mobile img {
+	width: 80%;
+	height: unset;
+	margin: 10%;
+}
+
+.xcode_mobile .xcode_station_text {
+	position: unset;
+	width: 80%;
+	display: unset;
+	float:left;
+	border: none;
+	background: none;
+}
