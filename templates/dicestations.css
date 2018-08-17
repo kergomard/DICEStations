@@ -9,7 +9,6 @@
 .xcode_station img {
 	height: 64px;
 	width: 64px;
-	border: 1px solid #0989d6;
 	border-radius: 32px;
 	background-color: #fa8228;
 }
@@ -25,6 +24,7 @@
 	color: #fff;
 	z-index: 2000;
 	padding: 5px;
+	text-align: center;
 }
 
 .xcode_station_text h1, .xcode_station_test p {

@@ -192,7 +192,10 @@ class ilDICEStationsPluginGUI extends ilPageComponentPluginGUI {
 	        	$tpl->setCurrentBlock("xcode_station_display");
 	
 	                foreach ($items as $item) {
-	                	if (ilObject2::_lookupType($item, true) == 'grp') {
+	                    $timings = ilObjectActivation::getItem($item);
+	                    if (ilObject2::_lookupType($item, true) == 'grp' && 
+	                        ($timings['timing_type'] != ilObjectActivation::TIMINGS_ACTIVATION || 
+	                            $timings["timing_start"] < time() && $timings["timing_end"] > time())) {
 	                		$obj = new ilObjGroup($item);
 	               			$tpl->setVariable('GRP_IMG', ilObject::_getIcon($obj->getId(),'big', 'grp'));
 	               			$tpl->setVariable('GRP_TITLE', $obj->getTitle());
