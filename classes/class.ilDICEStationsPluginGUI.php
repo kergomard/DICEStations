@@ -205,7 +205,7 @@ class ilDICEStationsPluginGUI extends ilPageComponentPluginGUI {
 	               			$this->ctrl->setParameterByClass("ilobjgroupgui", "ref_id", $this->ref_id);
 	               			$tpl->setVariable('GRP_LINK', $link);
 	               			
-	               			$tpl->setVariable('GRP_DESC', $obj->getDescription());
+	               			$tpl->setVariable('GRP_DESC', $obj->getLongDescription());
 
 	                        $tpl->parseCurrentBlock();
 	                	}
