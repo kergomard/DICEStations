@@ -25,6 +25,19 @@ $(document).ready(function() {
 	let dist = function() {
 		let s = $('.xcode_station');
 		let ln = 1;
+		
+		if (sw == 0) {
+			p =  $('.xcode_stations').parent();
+			
+			while (p.is(':hidden')) {
+				p = p.parent();
+			}
+			
+			p.show();
+			sw = $('.xcode_stations').width();
+			p.hide();
+		}
+		
 		let ew = sw/s.length;
 		let el = s.length;
 		if (isMobile.matches) {
